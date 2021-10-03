@@ -94,6 +94,7 @@ header {
 .navbar-links ul {
   margin: 0;
   padding: 0;
+  height: auto;
   display: flex;
   list-style: none;
   background: rgb(13, 153, 189);
@@ -108,9 +109,8 @@ header {
   border-radius: 0.7rem;
 }
 
-.navbar-links li:hover {
-  background: rgb(119, 201, 221);
-  border-radius: 0.7rem;
+.navbar-links li a:hover {
+  color: #817d7d;
 }
 
 /* Humberger menu */
@@ -354,14 +354,14 @@ header {
   }
   100% {
     opacity: 1;
-    height: 100%;
+    height: 110px;
   }
 }
 
 @keyframes roll-in {
   0% {
     opacity: 1;
-    height: 100%;
+    height: 110px;
   }
   100% {
     opacity: 0;
@@ -491,9 +491,8 @@ header {
     display: flex;
     align-items: center;
     right: 1.5rem;
-    top: 40px;
     width: 7rem;
-    height: 0px;
+    height: 7rem;
     flex-direction: column;
     border-radius: 3px;
   }
@@ -511,10 +510,12 @@ header {
   }
   .navbar-links.active ul {
     display: flex;
+    height: auto;
     border-radius: 0.3rem;
     animation: roll-out 500ms ease-in-out both;
   }
   .navbar-links.roll-in ul {
+    height: 0;
     animation: roll-in 500ms ease-in-out both;
   }
 }
