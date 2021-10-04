@@ -53,6 +53,31 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
+document.addEventListener("touchmove", (e) => {
+  let x, y;
+
+  for (let i = 0; i < e.touches.length; i++) {
+    x = e.touches[i].clientX;
+    y = e.touches[i].clientY;
+  }
+  const person1Center = y + 100;
+  const dPersonLand = e.clientY - landBottomY;
+
+  if (person1Center > landTopY && y < landBottomY - 200) {
+    person1.classList.add("in");
+
+    removeOutClass();
+
+    scalePerson(dPersonLand);
+
+    setPersonOnCursor(x, y);
+
+    walkingEffect();
+  } else {
+    addOutClass();
+  }
+});
+
 const getMousePosition = (e) => {
   const x = e.pageX - person1CorrectPositon;
   const y = e.pageY - 100;
