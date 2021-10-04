@@ -25,6 +25,9 @@ if (window.innerWidth > 780) {
 const land = document.getElementsByClassName("land")[0];
 const landTopY = Math.floor(land.getBoundingClientRect().y);
 const landBottomY = Math.floor(land.getBoundingClientRect().bottom);
+const skyTop = document
+  .getElementsByClassName("sky")[0]
+  .getBoundingClientRect().top;
 
 const skyBottom = Math.floor(
   document.getElementsByClassName("sky")[0].getBoundingClientRect().bottom
@@ -59,6 +62,9 @@ document.addEventListener("touchmove", (e) => {
   for (let i = 0; i < e.touches.length; i++) {
     x = e.touches[i].clientX;
     y = e.touches[i].clientY;
+  }
+  if (y > skyTop && y < landBottomY) {
+    e.preventDefault();
   }
   const person1Center = y + 100;
   const dPersonLand = e.clientY - landBottomY;
