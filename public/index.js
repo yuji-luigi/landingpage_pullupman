@@ -64,7 +64,16 @@ document.addEventListener("touchmove", (e) => {
     y = e.touches[i].clientY;
   }
   if (y > skyTop && y < landBottomY) {
-    e.preventDefault();
+    disableScroll();
+    function disableScroll() {
+      // Get the current page scroll position
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      (scrollLeft = window.pageXOffset || document.documentElement.scrollLeft),
+        // if any scroll is attempted, set this to the previous value
+        (window.onscroll = function () {
+          window.scrollTo(scrollLeft, scrollTop);
+        });
+    }
   }
   const person1Center = y + 100;
   const dPersonLand = e.clientY - landBottomY;
