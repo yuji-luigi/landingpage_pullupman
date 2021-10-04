@@ -494,7 +494,7 @@ h5 {
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 780px) {
   .top-boiler {
     width: 100vw;
     border: none;
@@ -508,5 +508,9 @@ h5 {
 
   #section1 {
     border-radius: 0;
+  }
+
+  #section1 .content h1 {
+    font-size: 2rem;
   }
 }
