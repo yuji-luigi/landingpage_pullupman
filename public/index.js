@@ -6,6 +6,7 @@ const legLeft = document.querySelector("[data-leg-l]");
 const legRight = document.querySelector("[data-leg-r]");
 const armLeft = document.querySelector("[data-arm-l]");
 const armRight = document.querySelector("[data-arm-r]");
+const wordOnBar = document.querySelector(".pullup-bar h5");
 const positionerPerson1 = document.getElementsByClassName(
   "positioner-person-1"
 )[0];
@@ -106,13 +107,16 @@ const showPullup = (x, y) => {
       pullmsg.textContent = "Workout???";
     }
   } else {
-    if (x > left && x < right && y > pullupTop && y < bottom) {
+    if (x > left - 60 && x < right && y > pullupTop - 200 && y < bottom - 100) {
       person1.classList.add("hide");
       personPullup.classList.add("hovering");
+      wordOnBar.classList.add("hovering");
       pullmsg.textContent = "WORKOUT!!";
     } else {
       personPullup.classList.remove("hovering");
       person1.classList.remove("hide");
+      wordOnBar.classList.remove("hovering");
+
       pullmsg.textContent = "Workout???";
     }
   }
