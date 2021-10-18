@@ -73,13 +73,13 @@ const swipeHandler = (e) => {
   }
 
   const person1Center = y + 100;
-  const dPersonLand = y - landBottomY - 60;
+  const dPersonLand = y - landBottomY - 20;
 
   if (person1Center > landTopY && y < landBottomY) {
     person1.classList.add("in");
     removeOutClass();
     scalePerson(dPersonLand);
-    setPersonOnCursor(x, y);
+    setPersonOnCursor(x - 10, y - 30);
     walkingEffect();
   } else {
     addOutClass();
