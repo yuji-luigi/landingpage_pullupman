@@ -502,6 +502,7 @@ h5 {
     border-radius: 0;
     overflow-y: hidden;
     overflow-x: hidden;
+    touch-action: none;
   }
 
   .top-boiler .sky,
