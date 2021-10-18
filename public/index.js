@@ -71,16 +71,19 @@ const swipeHandler = (e) => {
     x = e.touches[i].clientX;
     y = e.touches[i].clientY;
   }
-
-  const person1Center = y + 100;
-  const dPersonLand = y * 1.2 - landBottomY;
-
-  if (person1Center > landTopY && y < landBottomY) {
-    person1.classList.add("in");
-    removeOutClass();
-    scalePerson(dPersonLand);
-    setPersonOnCursor(x - 20, y - 80);
-    walkingEffect();
+  if (y < landBottomY - 100) {
+    const person1Center = y + 100;
+    const dPersonLand = y * 1.2 - landBottomY;
+    showPullup(x, y);
+    if (person1Center > landTopY && y < landBottomY) {
+      person1.classList.add("in");
+      removeOutClass();
+      scalePerson(dPersonLand);
+      setPersonOnCursor(x - 20, y - 80);
+      walkingEffect();
+    } else {
+      addOutClass();
+    }
   } else {
     addOutClass();
   }
