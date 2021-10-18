@@ -507,8 +507,6 @@ h5 {
   .top-boiler .sky,
   .top-boiler .land {
     border-radius: 0;
-    overflow-y: hidden;
-    overflow-x: hidden;
   }
 
   .pullup-bar {
