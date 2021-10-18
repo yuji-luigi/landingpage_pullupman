@@ -114,7 +114,7 @@ const showPullup = (x, y) => {
       pullmsg.textContent = "Workout???";
     }
   } else {
-    if (x > left - 60 && x < right && y > pullupTop - 200 && y < bottom - 100) {
+    if (x > left - 60 && x < right && y > pullupTop - 100 && y < bottom) {
       person1.classList.add("hide");
       personPullup.classList.add("hovering");
       wordOnBar.classList.add("hovering");
