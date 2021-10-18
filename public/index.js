@@ -1,5 +1,5 @@
 // REFACTOR WHERE CALCULATE THE DISTANCES AND RESPONSIVE DISTANCE PART!!!
-
+const topBoiler = document.getElementsByClassName("top-boiler")[0];
 const message = document.getElementsByClassName("resize-alert")[0];
 const pullmsg = document.getElementsByClassName("pullup-bar-msg")[0];
 const legLeft = document.querySelector("[data-leg-l]");
@@ -57,7 +57,14 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
-document.addEventListener("touchmove", (e) => {
+topBoiler.addEventListener("touchmove", (e) => {
+  swipeHandler(e);
+});
+topBoiler.addEventListener("touchstart", (e) => {
+  swipeHandler(e);
+});
+
+const swipeHandler = (e) => {
   let x, y;
 
   for (let i = 0; i < e.touches.length; i++) {
@@ -81,7 +88,8 @@ document.addEventListener("touchmove", (e) => {
   } else {
     addOutClass();
   }
-});
+};
+topBoiler.addEventListener("touchmove", (e) => {});
 
 const getMousePosition = (e) => {
   const x = e.pageX - person1CorrectPositon;
