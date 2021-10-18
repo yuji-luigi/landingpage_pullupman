@@ -73,7 +73,7 @@ const swipeHandler = (e) => {
   }
 
   const person1Center = y + 100;
-  const dPersonLand = y - landBottomY / 1.5;
+  const dPersonLand = y * 1.2 - landBottomY;
 
   if (person1Center > landTopY && y < landBottomY) {
     person1.classList.add("in");
