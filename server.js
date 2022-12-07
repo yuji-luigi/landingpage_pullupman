@@ -8,5 +8,5 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 
-const PORT = process.env.PORT || 4242
+const PORT = process.env.PORT || 4100
 app.listen(PORT, () => console.log(`server is runnning http://localhost:${PORT}`))
