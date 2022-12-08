@@ -306,7 +306,7 @@ const classListCheck =(e)=> {
         name:'WIDE PULLUP(HOLLOW BODY)+ BODY ROW!',
         video:'<source src="image/workout-images/bodyrow_widepullup.mp4">',
         
-        description: 'Hollow body wide pull up. As you go up open your chest, in other words fully retract the scapulars. Your main goal is to touch the pullup bar with your chest. Don\'t worry, even if you can\'t gradually you will get stronger. The most important thing is that to know if you can do this excersise correctly. If you can\'t retract your scapular at the top position. I encorage you to perform bodyrows. ',
+        description: 'Hollow body wide pull up. As you go up open your chest, in other words fully retract the scapulars. Your main goal is to touch the pullup bar with your chest. Don\'t worry, even if you can\'t gradually you will get stronger. The most important thing is that to know if you can do this exercise correctly. If you can\'t retract your scapular at the top position. I encourage you to perform body-rows. ',
         reps: '8-20',
         restTime: '0',
 
