@@ -1,0 +1,332 @@
+*{
+    box-sizing: border-box;
+    color: #777;
+    padding: 0;
+}
+html, body{
+    text-align: center;
+    padding: 0;
+}
+section {
+    margin: 0;
+}
+
+h1 {
+    margin:0;
+}
+
+h2 {
+    margin:0;
+}
+header {
+    display:none;
+    background-image: url("../image/workout-images/planche.jpg");
+    background-size: cover;
+    background-position: center;
+    margin:0;
+   
+}
+
+.main-nav{
+    text-align:center;
+    padding: 1.1em;
+    font-weight: lighter;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+.nav ul {
+    margin:0;
+    padding: 0;
+    
+    
+}
+
+.nav li{
+    display: inline-block;
+    font-size: 1.3em;
+    padding: 10px;
+    border: solid black 1px;
+    border-radius: 0.4em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(204, 186, 186, 0.897);
+    
+    text-decoration: none;
+}
+
+
+.nav li:hover {
+    background-color:rgba(255,255,255,.3);
+    cursor: pointer;
+}
+
+
+
+.other-nav ul {
+    margin:0;
+}
+
+
+.routine {
+    font-size: 1.2em;
+    font-weight:bold;
+    color: black;
+    
+}
+
+.excersise-img {
+    height: 60px;
+    width: 60px;
+  
+}
+
+
+
+
+
+.workout-section {
+    justify-content: center;
+    background-image: url("../image/workout-images/image_grotta.jpeg");
+    background-size: 100%;
+    background-blend-mode: multiply;
+    width: 100%;
+    padding: 10%;
+}
+.section-header {
+    text-align: center;
+    font-size:3em;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.5);
+    margin:0;
+    
+}
+
+.section-contents {
+    margin: auto;
+    max-width: 80%;
+   display:flexbox;
+    
+}
+
+.workout-icons {
+    text-align: center;
+    
+}
+
+.workout-icon-wrapper {
+    
+    background-image: url("../image/workout-images/dumbbells.png");
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 1em;
+    padding: 10px;
+    background-color: rgba(255,255,255,.6);
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+.workout-icon-wrapper:hover{
+    cursor: pointer;
+      
+    background-color: rgba(255,255,255,0.3);
+}
+ 
+.workout-names {
+    color: black;
+    width: auto;
+    height:fit-content;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.658);
+    border-radius: 1em;
+    padding:3px ;
+    text-align: center;
+    margin: 0;
+}
+
+.sub-header {
+    color:rgba(255, 255, 255, 1);
+    font-size:2em;
+    text-align: center;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.507);
+}
+
+footer {
+    background-image:url("../image/workout-images/planche.jpg")
+}
+
+.workout-type {
+    border-top:solid rgba(255, 255, 255, 1);
+    
+    
+    
+}
+
+.workout-icons {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.icon {
+    margin: 3%;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+}
+
+.modal.active {
+    display:block
+}
+
+
+
+.close-tab{
+    color: rgba(255, 255, 255, 1);
+    font-size:2em;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    
+}
+
+.close-tab:hover {
+    cursor: pointer;
+}
+
+.flex-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside-one-workout {
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    position: fixed;
+    top:5%;
+    justify-content: center;
+    padding: 20px;
+    z-index: 2;
+    color: #000;
+    width:70%;
+    height:90%;
+    background-color: rgba(0, 0, 0, 0.5);   
+    max-height: calc(100vh);
+    overflow-y: auto;
+
+}
+
+.skill-img {
+    width: 300px;
+    height: 200px;
+}
+
+.workout-lists-div {
+    display: inline;
+   
+}
+
+ .workout-lists-div, li {
+     list-style-type: none;     
+ }
+
+.inside-one-workout li:hover {
+    cursor: pointer;
+}
+
+.inside-one-workout li, ul, td, th, p, h3, pre{
+     color:rgba(255, 255, 255, 1)
+}
+
+.inside-description img {
+    width: 50%;
+    height: auto;
+}
+
+.inside-one-workout.selected {
+    display:block;
+}
+
+.workout-wrapper {
+    z-index: 5;
+    color:rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+.workout {
+    display:none;
+    background-color: rgba(3, 4, 17, 0.849) ;
+    width:70%;
+    height:90%;
+    position:fixed;
+    top: 30px;
+    z-index: 5;
+    text-align: center;
+    justify-content: center;
+    max-height: calc(100vh);
+    overflow-y: auto;
+    height:90%;
+}
+.workout.active {
+    display: block;
+}
+
+.workout-description {
+    text-align:center;
+    margin-left:10%; 
+    width: 300px;
+}
+
+.workout th,td{
+    color: rgba(255, 255, 255, 1);
+    text-align: left;
+    vertical-align: top;
+
+}
+
+.workout table {
+    width:800px ;
+}
+
+.workout-close-tab {
+    color: rgba(255, 255, 255, 1);
+    font-size:2em;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+}
+
+.workout-close-tab:hover {
+    cursor: pointer;
+}
+
+@media(min-width: 700px) {
+    .inside-one-workout {
+        width: 80%;
+    }
+}

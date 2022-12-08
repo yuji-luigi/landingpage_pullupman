@@ -1,0 +1,32 @@
+#Version of docker-compose file format
+#IMPORTANT FIRST run docker network create nginx-proxy
+
+version: "3"
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy:alpine
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./vhostd:/etc/nginx/vhost.d
+      # - ./html:/usr/share/nginx/html
+      # - ./certs:/etc/nginx/certs:ro
+      # - ./vhostd/nginx.conf:/etc/nginx/nginx.conf
+      - ./server.js:/usr/src/app/server.js
+      - ./public:/usr/src/app/public
+      - ./vhostd/my_custom_proxy_settings.conf:/etc/nginx/conf.d/my_custom_proxy_settings.conf
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+  landing-page:
+    build: .
+    container_name: landing-page-static
+    restart: always
+    environment:
+      VIRTUAL_HOST: yuji-luigi.com.localhost
+    env_file: .env
+  
+networks:
+  default:
+    external:
+      name: nginx-proxy
