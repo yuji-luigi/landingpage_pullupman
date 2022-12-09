@@ -4,3 +4,7 @@ package-lock.json
 .history
 package-lock.json
 pnpm-lock.yaml
+nginx-conf-copy
+vhostd 
+
+*.mp4.icloud
