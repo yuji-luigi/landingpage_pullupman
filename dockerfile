@@ -21,7 +21,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY public/image/workout-images ./public/image/workoutimages
 COPY public/image ./public/image
 
-COPY .env .
+# COPY .env .
 
 
 COPY api ./api
