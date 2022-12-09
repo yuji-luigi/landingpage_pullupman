@@ -8,3 +8,4 @@ nginx-conf-copy
 vhostd 
 
 *.mp4.icloud
+docker-compose copy.yml
